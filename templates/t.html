@@ -42,61 +42,79 @@
         </h5>
       </div>
 
-              <div class="row">
-    <form action='/predict' method="post" class="col s12">
       <div class="row">
-        <div class="input-field col s4"><br>
-            <label for="first_name"><b>Sex Of the Driver</b></label>
-            <br>
-          <input placeholder="0 for Female and 1 for Male"  required="required" name="Temperature" id="first_name" type="number" class="validate" size="30">
-        </div><br>
-        <div class="input-field col s4">
-            
-          <label for="last_name"><b>Vehicle Type</b></label>
-            <br>
-          <input id="last_name" name="Oxygen" required="required" placeholder="n for n-seater vehicle"  type="number" class="validate" size="30">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+            <div class="col s12 m4">
+              <label><b>Sex Of the Driver</b></label>
+              <select name="Temperature" required="required" class="browser-default" style="margin-top: 10px; height: 45px; border-radius: 4px;">
+                <option value="" disabled selected>Select Gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+              </select>
+            </div>
+            <div class="col s12 m4">
+              <label><b>Vehicle Type</b></label>
+              <input name="Oxygen" required="required" placeholder="n for n-seater vehicle" type="number" class="validate" style="margin-top: 10px;">
+            </div>
+            <div class="col s12 m4">
+              <label><b>Speed Limit</b></label>
+              <input name="Humidity" required="required" placeholder="Speed limit in kmph" type="number" class="validate" style="margin-top: 10px;">
+            </div>
+          </div>
 
-        </div>
+          <div class="row">
+            <div class="col s12 m4">
+              <label><b>Road Type</b></label>
+              <select name="Road" required="required" class="browser-default" style="margin-top: 10px; height: 45px; border-radius: 4px;">
+                <option value="" disabled selected>Select Road Type</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+            <div class="col s12 m4">
+              <label><b>Number of Passengers</b></label>
+              <input name="Passengers" required="required" placeholder="Passengers in car" type="number" class="validate" style="margin-top: 10px;">
+            </div>
+            <div class="col s12 m4">
+              <label><b>Day</b></label>
+              <select name="Day" required="required" class="browser-default" style="margin-top: 10px; height: 45px; border-radius: 4px;">
+                <option value="" disabled selected>Select Day</option>
+                <option value="0">Sunday</option>
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+              </select>
+            </div>
+          </div>
 
-        <div class="input-field col s4">
-            <label for="_name"><b>Speed Limit</b></label>
-            <br>
-          <input id="_name" name="Humidity" required="required" placeholder="Speed limit on the road in kmph" type="number" class="validate" size="30">
+          <div class="row">
+            <div class="col s12 m4">
+              <label><b>Light Conditions</b></label>
+              <select name="Light" required="required" class="browser-default" style="margin-top: 10px; height: 45px; border-radius: 4px;">
+                <option value="" disabled selected>Select Light Condition</option>
+                <option value="0">Daytime</option>
+                <option value="1">Night</option>
+              </select>
+            </div>
+          </div>
 
-        </div><br>
-        <div class="input-field col s4">
-
-            <label for="first_name"><b>Road Type</b></label>
-            <br>
-          <input placeholder="On a scale from 0 to 10" name="Road" required="required" id="first_name" type="number" class="validate" size="30">
-        </div><br>
-        <div class="input-field col s4">
-            <label for="first_name"><b>Number of Pasengers</b></label>
-            <br>
-          <input placeholder="Number of Pasengers seated in car" required="required" name="Passengers" id="first_name" type="number" class="validate" size="30">
-        </div><br>
-
-        <div class="input-field col s4">
-            <label for="first_name"><b>Day</b></label>
-            <br>
-          <input placeholder="Day starting with 0 for Sunday" required="required" name="Day" id="first_name" type="number" class="validate" size="30">
-        </div><br>
-
-        <div class="input-field col s4">
-            <label for="first_name"><b>Light Conditions</b></label>
-            <br>
-          <input placeholder="Enter 0 for Daytime and 1 for Night" required="required" name="Light" id="first_name" type="number" class="materialize-textarea" size="30">
-        </div><br>
-
-
-      </div>
-
-        <div class="row center">
-
-          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
-
-        </div>
-    </form>
+          <div class="row center" style="margin-top: 30px;">
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+          </div>
+        </form>
       </div> 
 
       <br>
